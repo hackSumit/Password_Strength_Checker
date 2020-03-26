@@ -128,8 +128,13 @@ Ucase.addEventListener('click',()=>{
  
 var result;
 document.getElementById('check').addEventListener('click',()=>{
+
   var com=['Bad','Average','Good','Good','Strong'];
-  
+  if(document.getElementById('psd').value===''){
+
+alert('Please Insert some text,for Checking the strength');
+  }
+
   if(document.getElementById('psd').value){
   let input=document.getElementById('psd').value;
    result=zxcvbn(input, user_inputs=[]);
